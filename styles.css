@@ -16,6 +16,7 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 header .logo {
@@ -28,6 +29,7 @@ header .nav-links {
     padding: 10px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 header .nav-links li {
@@ -50,6 +52,7 @@ header .nav-links li a {
     text-align: left;
     padding: 200px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .hero::before {
@@ -66,6 +69,7 @@ header .nav-links li a {
 .hero .hero-content {
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 .hero .hero-content h1 {
@@ -81,7 +85,7 @@ header .nav-links li a {
 .about {
     padding: 50px 20px;
     text-align: center;
-    background: #e0e0e0; 
+    background: #e0e0e0;
 }
 
 .about h2 {
@@ -94,6 +98,7 @@ header .nav-links li a {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; 
 }
 
 .about .about-content img {
@@ -122,17 +127,19 @@ header .nav-links li a {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .bio .bio-content img {
-    width: 1000px;
+    max-width: 100%;
+    height: auto;
 }
 
 .contact {
     padding: 50px 20px;
     text-align: center;
-    background: #000; 
-    color: #fff; 
+    background: #000;
+    color: #fff;
 }
 
 .contact h2 {
@@ -149,11 +156,13 @@ header .nav-links li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 20px; 
+    flex-wrap: wrap;
 }
 
 .contact-item {
     text-align: center;
+    flex-basis: calc(33.333% - 40px);
 }
 
 .contact-item img {
@@ -170,4 +179,28 @@ header .nav-links li a {
 .contact-item p {
     font-size: 20px;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+        text-align: center;
+    }
+    
+    .hero .hero-content h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-content p {
+        font-size: 20px;
+    }
+
+    header .nav-links {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
 }
