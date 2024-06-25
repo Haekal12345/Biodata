@@ -95,7 +95,7 @@ header .nav-links li a {
 
 .about .about-content {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap; 
