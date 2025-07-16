@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    font-size: 30px;
+}
+
+header .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+header .nav-links li {
+    font-size: 25px;
+}
+
+header .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.hero {
+    height: 100vh;
+    background: url('HomePhoto.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #f8f8f8;
+    text-align: left;
+    padding: 200px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero .hero-content h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero .hero-content p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background: #e0e0e0;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.about .about-content img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.about .about-content p {
+    max-width: 600px;
+    text-align: left;
+}
+
+.bio {
+    padding: 50px 20px;
+    text-align: center;
+    background: #e0e0e0;
+}
+
+.bio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.bio .bio-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bio .bio-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+    flex-basis: calc(33.333% - 40px);
+}
+
+.contact-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.contact-item h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 20px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+        text-align: center;
+    }
+    
+    .hero .hero-content h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-content p {
+        font-size: 20px;
+    }
+
+    header .nav-links {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+}
